@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OZE Avatar - Smart Energy Management</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+    
+</head>
+<body>
+    <div class="phone-container">
+        <div class="phone-screen">
+            <div class="app-container">
+                <!-- Status Bar -->
+                <div class="status-bar">
+                    <span id="timeDisplay">9:41</span>
+                    <span>⚡ 🔋 📶</span>
+                </div>
+                
+                <!-- Header -->
+                <div class="app-header">
+                    <div class="header-title">OZE Avatar</div>
+                    <div class="header-subtitle">Nature powers, AI empowers</div>
+                </div>
+                
+                <!-- Content Area -->
+                <div class="app-content">
+                    <!-- Home Tab -->
+                    <div class="tab-view active" id="homeTab">
+                        <div class="energy-flow-container">
+                            <div class="energy-flow-diagram">
+                                <div class="energy-flow-line flow-line-left"></div>
+                                <div class="energy-flow-line flow-line-right"></div>
+                                
+                                <div class="energy-node">
+                                    <div class="energy-icon">☀️</div>
+                                    <div class="energy-value">3.54 kW</div>
+                                    <div class="energy-label">Produkcja</div>
+                                </div>
+                                
+                                <div class="energy-node">
+                                    <div class="central-hub">⚡</div>
+                                </div>
+                                
+                                <div class="energy-node">
+                                    <div class="energy-icon">🏠</div>
+                                    <div class="energy-value">1.10 kW</div>
+                                    <div class="energy-label">Zużycie</div>
+                                </div>
+                            </div>
+                            
+                            <div class="stats-grid">
+                                <div class="stat-card">
+                                    <div class="stat-icon">🔋</div>
+                                    <div class="stat-info">
+                                        <div class="stat-value">100%</div>
+                                        <div class="stat-label">Bateria</div>
+                                    </div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-icon">🔌</div>
+                                    <div class="stat-info">
+                                        <div class="stat-value">2.44 kW</div>
+                                        <div class="stat-label">Do sieci</div>
+                                    </div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-icon">📊</div>
+                                    <div class="stat-info">
+                                        <div class="stat-value">10.6 kWh</div>
+                                        <div class="stat-label">Dziś</div>
+                                    </div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-icon">💰</div>
+                                    <div class="stat-info">
+                                        <div class="stat-value">4.82 zł</div>
+                                        <div class="stat-label">Oszczędność</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="notification-card">
+                            <span class="notification-icon">💡</span>
+                            <span class="notification-text">Świetne warunki! Wykorzystaj nadwyżkę energii</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Weather Tab -->
+                    <div class="tab-view" id="weatherTab">
+                        <div class="weather-header">
+                            <div class="current-weather">
+                                <div class="weather-main">
+                                    <div class="weather-temp">22°C</div>
+                                    <div class="weather-desc">Słonecznie</div>
+                                </div>
+                                <div class="weather-icon-large">☀️</div>
+                            </div>
+                            <div class="weather-details">
+                                <div class="weather-detail">
+                                    <div class="detail-value">5%</div>
+                                    <div class="detail-label">Zachmurzenie</div>
+                                </div>
+                                <div class="weather-detail">
+                                    <div class="detail-value">0 mm</div>
+                                    <div class="detail-label">Opady</div>
+                                </div>
+                                <div class="weather-detail">
+                                    <div class="detail-value">8 km/h</div>
+                                    <div class="detail-label">Wiatr</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="forecast-container">
+                            <div class="forecast-title">Prognoza 7-dniowa</div>
+                            <div class="forecast-days">
+                                <div class="forecast-day selected" data-day="0" onclick="selectDay(0)">
+                                    <div class="forecast-day-name">Dziś</div>
+                                    <div class="forecast-icon">☀️</div>
+                                    <div class="forecast-temp">24°</div>
+                                </div>
+                                <div class="forecast-day" data-day="1" onclick="selectDay(1)">
+                                    <div class="forecast-day-name">Pon</div>
+                                    <div class="forecast-icon">⛅</div>
+                                    <div class="forecast-temp">22°</div>
+                                </div>
+                                <div class="forecast-day" data-day="2" onclick="selectDay(2)">
+                                    <div class="forecast-day-name">Wt</div>
+                                    <div class="forecast-icon">☁️</div>
+                                    <div class="forecast-temp">19°</div>
+                                </div>
+                                <div class="forecast-day" data-day="3" onclick="selectDay(3)">
+                                    <div class="forecast-day-name">Śr</div>
+                                    <div class="forecast-icon">🌧️</div>
+                                    <div class="forecast-temp">17°</div>
+                                </div>
+                                <div class="forecast-day" data-day="4" onclick="selectDay(4)">
+                                    <div class="forecast-day-name">Czw</div>
+                                    <div class="forecast-icon">⛅</div>
+                                    <div class="forecast-temp">20°</div>
+                                </div>
+                                <div class="forecast-day" data-day="5" onclick="selectDay(5)">
+                                    <div class="forecast-day-name">Pt</div>
+                                    <div class="forecast-icon">☀️</div>
+                                    <div class="forecast-temp">23°</div>
+                                </div>
+                                <div class="forecast-day" data-day="6" onclick="selectDay(6)">
+                                    <div class="forecast-day-name">Sob</div>
+                                    <div class="forecast-icon">☀️</div>
+                                    <div class="forecast-temp">25°</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="hourly-chart">
+                            <div class="chart-header">
+                                <div class="chart-title">Produkcja godzinowa</div>
+                                <div class="chart-navigation">
+                                    <button class="chart-nav-btn" onclick="previousDay()">←</button>
+                                    <button class="chart-nav-btn" onclick="nextDay()">→</button>
+                                </div>
+                            </div>
+                            <div class="chart-container">
+                                <div class="chart-y-axis">
+                                    <span>5 kW</span>
+                                    <span>4 kW</span>
+                                    <span>3 kW</span>
+                                    <span>2 kW</span>
+                                    <span>1 kW</span>
+                                    <span>0 kW</span>
+                                </div>
+                                <svg class="chart-svg" viewBox="0 0 300 200" style="margin-left: 30px;">
+                                    <defs>
+                                        <linearGradient id="gradientHistory" x1="0%" y1="0%" x2="0%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#5b21b6;stop-opacity:0.3" />
+                                            <stop offset="100%" style="stop-color:#5b21b6;stop-opacity:0" />
+                                        </linearGradient>
+                                        <linearGradient id="gradientPrediction" x1="0%" y1="0%" x2="0%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:0.2" />
+                                            <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0" />
+                                        </linearGradient>
+                                    </defs>
+                                    
+                                    <!-- Grid lines -->
+                                    <line x1="20" y1="180" x2="280" y2="180" class="chart-grid" />
+                                    <line x1="20" y1="144" x2="280" y2="144" class="chart-grid" />
+                                    <line x1="20" y1="108" x2="280" y2="108" class="chart-grid" />
+                                    <line x1="20" y1="72" x2="280" y2="72" class="chart-grid" />
+                                    <line x1="20" y1="36" x2="280" y2="36" class="chart-grid" />
+                                    
+                                    <!-- Chart will be drawn here by JavaScript -->
+                                    <g id="chartContent"></g>
+                                </svg>
+                            </div>
+                            <div class="chart-labels">
+                                <span>00:00</span>
+                                <span>06:00</span>
+                                <span>12:00</span>
+                                <span>18:00</span>
+                                <span>24:00</span>
+                            </div>
+                            <div class="prediction-notice">
+                                <span>📊</span>
+                                <span>Dane historyczne  </span>
+                                <span class="prediction-indicator"></span>
+                                <span> Predykcja na pozostałe godziny</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tasks Tab -->
+                    <div class="tab-view" id="tasksTab">
+                        <div class="task-actions">
+                            <button class="action-btn primary" onclick="addTaskAI()">
+                                🤖 Zaplanuj z AI
+                            </button>
+                            <button class="action-btn secondary" onclick="addTaskManual()">
+                                ➕ Dodaj ręcznie
+                            </button>
+                        </div>
+                        
+                        <div id="tasksList">
+                            <div class="task-card" onclick="editTask(this, 'pralka')">
+                                <div class="task-header">
+                                    <div class="task-icon">🌊</div>
+                                    <div class="task-info">
+                                        <div class="task-name">Pralka</div>
+                                        <div class="task-power">Zużycie: 1.2 kW</div>
+                                    </div>
+                                    <div class="optimal-badge">Optymalne</div>
+                                    <div class="task-edit" onclick="event.stopPropagation(); editTask(this.parentElement.parentElement, 'pralka')">✏️</div>
+                                </div>
+                                <div class="task-schedule">
+                                    <span class="schedule-icon">🕐</span>
+                                    <span class="schedule-text">Dziś, 13:00 - 15:00</span>
+                                </div>
+                            </div>
+                            
+                            <div class="task-card" onclick="editTask(this, 'samochod')">
+                                <div class="task-header">
+                                    <div class="task-icon">🚗</div>
+                                    <div class="task-info">
+                                        <div class="task-name">Ładowanie samochodu</div>
+                                        <div class="task-power">Zużycie: 3.6 kW</div>
+                                    </div>
+                                    <div class="task-edit" onclick="event.stopPropagation(); editTask(this.parentElement.parentElement, 'samochod')">✏️</div>
+                                </div>
+                                <div class="task-schedule">
+                                    <span class="schedule-icon">🕐</span>
+                                    <span class="schedule-text">Jutro, 11:00 - 14:00</span>
+                                </div>
+                            </div>
+                            
+                            <div class="task-card" onclick="editTask(this, 'zmywarka')">
+                                <div class="task-header">
+                                    <div class="task-icon">🍽️</div>
+                                    <div class="task-info">
+                                        <div class="task-name">Zmywarka</div>
+                                        <div class="task-power">Zużycie: 1.5 kW</div>
+                                    </div>
+                                    <div class="task-edit" onclick="event.stopPropagation(); editTask(this.parentElement.parentElement, 'zmywarka')">✏️</div>
+                                </div>
+                                <div class="task-schedule">
+                                    <span class="schedule-icon">🕐</span>
+                                    <span class="schedule-text">Środa, 12:00 - 14:00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Chat Tab -->
+                    <div class="tab-view" id="chatTab">
+                        <div class="chat-container">
+                            <div class="chat-messages">
+                                <div class="chat-message">
+                                    <div class="message-avatar">🤖</div>
+                                    <div class="message-content">
+                                        Cześć! Jestem Twoim asystentem energetycznym. Pomogę Ci optymalnie zarządzać energią w domu. Co Cię dziś interesuje?
+                                    </div>
+                                </div>
+                                
+                                <div class="notification-card">
+                                    <span class="notification-icon">🔔</span>
+                                    <span class="notification-text">Jutro o 10:00 - optymalna pora na pranie! Prognozowana produkcja: 4.2 kW</span>
+                                </div>
+                                
+                                
+                            </div>
+                            
+                            <div class="chat-input-container">
+                                <div class="quick-actions">
+                                    <div class="quick-action">💡 Porady oszczędnościowe</div>
+                                    <div class="quick-action">📊 Analiza zużycia</div>
+                                    <div class="quick-action">🔋 Stan systemu</div>
+                                    <div class="quick-action">☀️ Prognoza produkcji</div>
+                                </div>
+                                <div class="input-row">
+                                    <input type="text" class="chat-input" placeholder="Napisz wiadomość...">
+                                    <button class="chat-send">➤</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tab Navigation -->
+                <div class="tab-navigation">
+                    <button class="tab-button active" onclick="switchTab('home')">
+                        <span class="tab-icon">🏠</span>
+                        <span class="tab-label">Home</span>
+                    </button>
+                    <button class="tab-button" onclick="switchTab('weather')">
+                        <span class="tab-icon">☀️</span>
+                        <span class="tab-label">Pogoda</span>
+                    </button>
+                    <button class="tab-button" onclick="switchTab('tasks')">
+                        <span class="tab-icon">📋</span>
+                        <span class="tab-label">Zadania</span>
+                    </button>
+                    <button class="tab-button" onclick="switchTab('chat')">
+                        <span class="tab-icon">💬</span>
+                        <span class="tab-label">Asystent</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal for task editing -->
+    <div class="modal" id="taskModal">
+        <div class="modal-content">
+            <div class="modal-header">Edytuj zadanie</div>
+            <div class="form-group">
+                <label class="form-label">Urządzenie</label>
+                <input type="text" class="form-input" id="deviceName" value="Pralka">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Data</label>
+                <input type="date" class="form-input" id="taskDate">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Godzina rozpoczęcia</label>
+                <div class="time-slots">
+                    <div class="time-slot" onclick="selectStartTime(this)">08:00</div>
+                    <div class="time-slot" onclick="selectStartTime(this)">09:00</div>
+                    <div class="time-slot" onclick="selectStartTime(this)">10:00</div>
+                    <div class="time-slot optimal" onclick="selectStartTime(this)">11:00</div>
+                    <div class="time-slot optimal" onclick="selectStartTime(this)">12:00</div>
+                    <div class="time-slot optimal selected" onclick="selectStartTime(this)">13:00</div>
+                    <div class="time-slot optimal" onclick="selectStartTime(this)">14:00</div>
+                    <div class="time-slot" onclick="selectStartTime(this)">15:00</div>
+                    <div class="time-slot" onclick="selectStartTime(this)">16:00</div>
+                    <div class="time-slot" onclick="selectStartTime(this)">17:00</div>
+                    <div class="time-slot" onclick="selectStartTime(this)">18:00</div>
+                    <div class="time-slot" onclick="selectStartTime(this)">19:00</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Czas trwania</label>
+                <div class="duration-select">
+                    <div class="duration-option selected" onclick="selectDuration(this)" data-hours="1">1 godz</div>
+                    <div class="duration-option" onclick="selectDuration(this)" data-hours="2">2 godz</div>
+                    <div class="duration-option" onclick="selectDuration(this)" data-hours="3">3 godz</div>
+                    <div class="duration-option" onclick="selectDuration(this)" data-hours="4">4 godz</div>
+                </div>
+            </div>
+            <div class="time-display" id="timeDisplay">
+                Godzina zakończenia: <strong>14:00</strong>
+            </div>
+            <div class="modal-actions">
+                <button class="modal-btn cancel" onclick="closeModal()">Anuluj</button>
+                <button class="modal-btn save" onclick="saveTask()">Zapisz</button>
+            </div>
+        </div>
+    </div>
+    <script src="static/js/main.js"></script>
+</body>
+</html>
