@@ -224,7 +224,7 @@ Nasze rozwiązanie integruje:
 
 ## 🚀 Wypróbuj!
 
-Przetestuj OZE Avatar już dziś: [Demo Live](https://filiplangiewicz.github.io/OZE_Avatar)
+Przetestuj OZE Avatar już dziś: [Demo Live](https://filiplangiewicz.github.io/CombAIns_SpaceShield/)
 
 Obejrzyj naszą prezentację: [Film na YouTube](https://youtu.be/VqWunWbElV4)
 
