@@ -192,21 +192,17 @@ Nasze rozwiązanie integruje:
 
 ## 👥 Nasz Zespół
 
-<div align="center">
-  <img src="assets/team.png" alt="Zespół OZE Avatar" width="700"/>
-</div>
+- **Filip Langiewicz** - [@FilipLangiewicz](https://github.com/FilipLangiewicz) 
 
-- **Filip Langiewicz** - Inżynier AI/ML
+- **Mikołaj Rowicki** - [@MikolajRowicki](https://github.com/MikolajRowicki)
 
-- **Mikołaj Rowicki** - Programista
+- **Igor Rudolf** - [@IgorRudolf](https://github.com/IgorRudolf)
 
-- **Igor Rudolf** - Badacz
+- **Michał Pytel** -  [@Michael-Pytel](https://github.com/Michael-Pytel)
 
-- **Michał Pytel** - Projektant UI/UX
+- **Maciej Momot** -  [@MaciejMomot](https://github.com/MaciejMomot)
 
-- **Maciej Momot** - Specjalista ds. Wideo Produktowego
-
-- **Jakub Półtorak** - Programista
+- **Jakub Półtorak** - [@JakubPoltorak147](https://github.com/JakubPoltorak147)
 
 ### Doradcy i Partnerzy
 
@@ -248,16 +244,6 @@ npm install
 npm start
 ```
 
-## 📑 Dokumentacja
-
-Pełna dokumentacja projektu dostępna jest w katalogu `/docs` oraz online:
-
-- [Przewodnik użytkownika](docs/user-guide.md)
-- [Dokumentacja techniczna](docs/technical-docs.md)
-- [API Reference](docs/api-reference.md)
-- [Przewodnik integracji](docs/integration-guide.md)
-- [FAQ](docs/faq.md)
-- [Rozwiązywanie problemów](docs/troubleshooting.md)
 
 ## 🤝 Współpraca
 
