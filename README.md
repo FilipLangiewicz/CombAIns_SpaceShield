@@ -226,7 +226,7 @@ Nasze rozwiązanie integruje:
 
 Przetestuj OZE Avatar już dziś: [Demo Live](https://filiplangiewicz.github.io/OZE_Avatar)
 
-Obejrzyj naszą prezentację: [Film na YouTube](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+Obejrzyj naszą prezentację: [Film na YouTube](https://youtu.be/VqWunWbElV4)
 
 ## 🔧 Instalacja
 
@@ -260,9 +260,6 @@ Jeśli jesteś zainteresowany współpracą, skontaktuj się z nami przez formul
 
 Rozpowszechniane na licencji MIT. Zobacz plik `LICENSE`, aby uzyskać więcej informacji.
 
-## 📞 Kontakt
-
-Link do projektu: [https://github.com/FilipLangiewicz/CombAIns_SpaceShield](https://github.com/FilipLangiewicz/CombAIns_SpaceShield)
 
 
 ---
