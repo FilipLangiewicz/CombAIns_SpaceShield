@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OZE Avatar - Smart Energy Management</title>
     <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     
     
 </head>
@@ -20,8 +21,16 @@
                 
                 <!-- Header -->
                 <div class="app-header">
-                    <div class="header-title">OZE Avatar</div>
-                    <div class="header-subtitle">Nature powers, AI empowers</div>
+                    <div class="header-content">
+                        <div class="header-text">
+                            <div class="header-title">OZE Avatar</div>
+                            <div class="header-subtitle">Nature powers, AI empowers</div>
+                        </div>
+                        <div class="header-icons">
+                            <button class="header-icon"><i class="fas fa-globe"></i></button>
+                            <button class="header-icon"><i class="fas fa-wheelchair"></i></button>
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- Content Area -->
@@ -273,6 +282,7 @@
                     <!-- Chat Tab -->
                     <div class="tab-view" id="chatTab">
                         <div class="chat-container">
+                            
                             <div class="chat-messages">
                                 <div class="chat-message">
                                     <div class="message-avatar">🤖</div>
@@ -297,9 +307,10 @@
                                     <div class="quick-action">☀️ Prognoza produkcji</div>
                                 </div>
                                 <div class="input-row">
+                                    <button class="chat-mic" id="micButton" onclick="toggleMic()">🎤</button>
                                     <input type="text" class="chat-input" placeholder="Napisz wiadomość...">
-                                    <button class="chat-send">➤</button>
-                                </div>
+                                <button class="chat-send">➤</button>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -308,19 +319,19 @@
                 <!-- Tab Navigation -->
                 <div class="tab-navigation">
                     <button class="tab-button active" onclick="switchTab('home')">
-                        <span class="tab-icon">🏠</span>
+                        <span class="tab-icon"><i class="fas fa-home"></i></span>
                         <span class="tab-label">Home</span>
                     </button>
                     <button class="tab-button" onclick="switchTab('weather')">
-                        <span class="tab-icon">☀️</span>
+                        <span class="tab-icon"><i class="fas fa-sun"></i></span>
                         <span class="tab-label">Pogoda</span>
                     </button>
                     <button class="tab-button" onclick="switchTab('tasks')">
-                        <span class="tab-icon">📋</span>
+                        <span class="tab-icon"><i class="fas fa-tasks"></i></span>
                         <span class="tab-label">Zadania</span>
                     </button>
                     <button class="tab-button" onclick="switchTab('chat')">
-                        <span class="tab-icon">💬</span>
+                        <span class="tab-icon"><i class="fas fa-comments"></i></span>
                         <span class="tab-label">Asystent</span>
                     </button>
                 </div>

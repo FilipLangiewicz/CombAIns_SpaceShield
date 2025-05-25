@@ -617,3 +617,58 @@ updateClock();
 
 // Update every minute (optional)
 setInterval(updateClock, 60000);
+let isRecording = false;
+
+function toggleMic() {
+    const micButton = document.getElementById('micButton');
+    
+    if (!isRecording) {
+        // Start recording
+        isRecording = true;
+        micButton.classList.add('recording');
+        micButton.innerHTML = '🔴';
+        
+        // Add message to chat
+        const chatMessages = document.querySelector('.chat-messages');
+        const statusMessage = document.createElement('div');
+        statusMessage.className = 'chat-message';
+        statusMessage.innerHTML = `
+            <div class="message-avatar">🤖</div>
+            <div class="message-content">Słucham... (naciśnij ponownie aby zatrzymać nagrywanie)</div>
+        `;
+        chatMessages.appendChild(statusMessage);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+        
+    } else {
+        // Stop recording
+        isRecording = false;
+        micButton.classList.remove('recording');
+        micButton.innerHTML = '🎤';
+        
+        // Simulate processing voice input
+        setTimeout(() => {
+            const chatMessages = document.querySelector('.chat-messages');
+            const userMessage = document.createElement('div');
+            userMessage.className = 'chat-message user-message';
+            userMessage.innerHTML = `
+                <div class="message-content">Kiedy najlepiej włączyć pralkę?</div>
+                <div class="message-avatar">👤</div>
+            `;
+            chatMessages.appendChild(userMessage);
+            
+            // Bot response
+            setTimeout(() => {
+                const botMessage = document.createElement('div');
+                botMessage.className = 'chat-message';
+                botMessage.innerHTML = `
+                    <div class="message-avatar">🤖</div>
+                    <div class="message-content">Na podstawie prognozy produkcji energii, najlepszy czas na pranie to jutro między 12:00-14:00. Produkcja słoneczna wyniesie wtedy 4.2 kW, co w pełni pokryje zapotrzebowanie pralki.</div>
+                `;
+                chatMessages.appendChild(botMessage);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }, 1000);
+            
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }, 1500);
+    }
+}
