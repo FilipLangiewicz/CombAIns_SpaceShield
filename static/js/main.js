@@ -318,10 +318,10 @@ let currentDay = 0;
     let deviceType = 'default';
     
     // Determine device type from name
-    if (deviceName.toLowerCase().includes('pralka')) deviceType = 'pralka';
+    if (deviceName.toLowerCase().includes('pralk')) deviceType = 'pralka';
     else if (deviceName.toLowerCase().includes('samochód') || deviceName.toLowerCase().includes('samochod') || 
-             deviceName.toLowerCase().includes('auto') || deviceName.toLowerCase().includes('ładowan')) deviceType = 'samochod';
-    else if (deviceName.toLowerCase().includes('zmywarka') || deviceName.toLowerCase().includes('naczyni')) deviceType = 'zmywarka';
+             deviceName.toLowerCase().includes('aut') || deviceName.toLowerCase().includes('ładowan')) deviceType = 'samochod';
+    else if (deviceName.toLowerCase().includes('zmywar') || deviceName.toLowerCase().includes('naczyn')) deviceType = 'zmywarka';
     
     // Determine icon based on device type
     let icon = '📱'; // Default icon
@@ -544,13 +544,13 @@ let currentDay = 0;
                     let responseText = '';
                     const lowerMessage = message.toLowerCase();
                     
-                    if (lowerMessage.includes('pralka') || lowerMessage.includes('pranie')) {
+                    if (lowerMessage.includes('pralk') || lowerMessage.includes('pran')) {
                         responseText = 'Sprawdzam optymalne godziny na pranie... Najbliższe okno to jutro 12:00-14:00. Produkcja wyniesie wtedy 4.2 kW, co w pełni pokryje zapotrzebowanie pralki. Czy mam zarezerwować ten termin?';
-                    } else if (lowerMessage.includes('samochód') || lowerMessage.includes('auto')) {
+                    } else if (lowerMessage.includes('samoch') || lowerMessage.includes('aut')) {
                         responseText = 'Dla ładowania samochodu elektrycznego polecam czwartek 10:00-16:00. Będzie pełne słońce, a produkcja osiągnie szczyt 4.8 kW. Naładujesz baterię do 80% używając tylko energii słonecznej!';
                     } else if (lowerMessage.includes('oszczędz') || lowerMessage.includes('zaoszczędz')) {
                         responseText = 'Analizując Twoje zużycie, możesz zaoszczędzić około 150 zł miesięcznie przesuwając główne zadania na godziny 11:00-15:00. Dodatkowo, obniżenie temperatury bojlera o 5°C da kolejne 20 zł oszczędności.';
-                    } else if (lowerMessage.includes('pogoda') || lowerMessage.includes('prognoza')) {
+                    } else if (lowerMessage.includes('pogod') || lowerMessage.includes('prognoz')) {
                         responseText = 'Najbliższe 3 dni będą słoneczne z produkcją 25-30 kWh dziennie. Od czwartku nadchodzi front z opadami - produkcja spadnie do 8-12 kWh. Polecam zaplanować energochłonne zadania na początek tygodnia.';
                     } else {
                         responseText = 'Rozumiem Twoje pytanie. Analizuję dane i przygotowuję najlepszą odpowiedź bazując na aktualnej produkcji energii, prognozie pogody i Twoim profilu zużycia...';
