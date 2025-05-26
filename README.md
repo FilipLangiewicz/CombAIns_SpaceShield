@@ -1,9 +1,12 @@
-# CombAIns SpaceShield (OZE Avatar)
+# OZE Avatar
 
 <div align="center">
   <img src="assets/logo.png" alt="OZE Avatar Logo" width="200"/>
   <h3>Natura daje energię. AI wie, jak ją wykorzystać.</h3>
+  Przetestuj OZE Avatar już dziś: https://filiplangiewicz.github.io/OZE_Avatar/.
+
 </div>
+
 
 ## 🌞 O Projekcie
 
@@ -224,7 +227,7 @@ Nasze rozwiązanie integruje:
 
 ## 🚀 Wypróbuj!
 
-Przetestuj OZE Avatar już dziś: [Demo Live](https://filiplangiewicz.github.io/CombAIns_SpaceShield/)
+Przetestuj OZE Avatar już dziś: [Demo Live](https://filiplangiewicz.github.io/OZE_Avatar/)
 
 Obejrzyj naszą prezentację: [Film na YouTube](https://youtu.be/VqWunWbElV4)
 
@@ -232,10 +235,10 @@ Obejrzyj naszą prezentację: [Film na YouTube](https://youtu.be/VqWunWbElV4)
 
 ```bash
 # Klonowanie repozytorium
-git clone https://github.com/FilipLangiewicz/CombAIns_SpaceShield.git
+git clone https://github.com/FilipLangiewicz/OZE_Avatar.git
 
 # Przejście do katalogu projektu
-cd CombAIns_SpaceShield
+cd OZE_Avatar
 
 # Instalacja zależności
 npm install
